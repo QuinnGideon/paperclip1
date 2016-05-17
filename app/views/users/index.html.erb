@@ -1,0 +1,6 @@
+<% @user.each do |user| %>
+  <%= user.name %>
+  <%= image_tag user.avatar.url %>
+  <p><%= link_to("Delete User", user_path(user), method: :delete) %>
+<br></p>
+<% end %>
